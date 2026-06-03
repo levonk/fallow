@@ -128,6 +128,33 @@ const dupes = await detectDuplication({ root: process.cwd(), mode: 'mild', minTo
 const health = await computeHealth({ root: process.cwd(), score: true, ownershipEmails: 'handle' });
 ```
 
+### With Nix (Flakes)
+
+For users who already have Nix with flakes enabled:
+
+```bash
+# Run without installing
+nix run github:fallow-rs/fallow
+
+# Install into your profile
+nix profile install github:fallow-rs/fallow
+
+# Build from source and enter a development shell
+nix develop github:fallow-rs/fallow
+```
+
+### With Devbox
+
+For reproducible development environments:
+
+```bash
+# Enter the development shell
+devbox shell
+
+# Build the project
+devbox run build
+```
+
 ## What Fallow reports
 
 ### Quality score

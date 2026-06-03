@@ -1,0 +1,37 @@
+name: Nix
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches: [main]
+  push:
+    branches: [main]
+    paths-ignore:
+      - "docs/**"
+      - "assets/**"
+      - "editors/**"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nix-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  flake-check:
+    name: flake check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
+
+      - name: Run Nix flake check
+        run: |
+          docker run --rm \
+            -v "$PWD:/work" \
+            -w /work \
+            docker.io/nixos/nix:2.31.2 \
+            sh -c 'nix --extra-experimental-features "nix-command flakes" flake check --print-build-logs && nix --extra-experimental-features "nix-command flakes" flake check --all-systems --no-build --print-build-logs'

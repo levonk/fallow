@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- **Added optional Nix flake support for building, running, installing, and developing fallow with Nix.** Provides `packages.default`, `apps.default`, `devShells.default`, and `checks.build` outputs. Install with `nix run github:fallow-rs/fallow` or `nix profile install github:fallow-rs/fallow`. A `devbox.json` is also included for reproducible development environments.
+
 ## [2.88.2] - 2026-06-03
 
 ### Fixed

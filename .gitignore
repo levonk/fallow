@@ -94,3 +94,7 @@ AGENTS.md
 
 decisions
 decisions/
+
+# Nix build result symlinks
+/result
+/result-*
