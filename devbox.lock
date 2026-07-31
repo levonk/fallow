@@ -1,0 +1,77 @@
+{
+  "lockfile_version": "1",
+  "packages": {
+    "cargo": {
+      "resolved": "github:NixOS/nixpkgs/3d46470bb3030020f7e1361f33514854f5bfa86d#cargo",
+      "source": "nixpkg",
+      "systems": {
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "path": "/nix/store/k2kynrir5rszv6dnx4lm8h39pjmsxr4c-cargo-1.95.0",
+              "default": true
+            }
+          ]
+        }
+      }
+    },
+    "github:NixOS/nixpkgs/8623c4c20aa4ca2f5fb81510d2944066c3fb0d96": {
+      "last_modified": "1970-01-01T00:00:00Z",
+      "resolved": "github:NixOS/nixpkgs/8623c4c20aa4ca2f5fb81510d2944066c3fb0d96"
+    },
+    "pkg-config": {
+      "resolved": "github:NixOS/nixpkgs/3d46470bb3030020f7e1361f33514854f5bfa86d#pkg-config",
+      "source": "nixpkg",
+      "systems": {
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "man",
+              "path": "/nix/store/9qd0n1nb130ixha7nn5f0hsnz89nl8vw-pkg-config-wrapper-0.29.2-man",
+              "default": true
+            },
+            {
+              "path": "/nix/store/vplhggifvzl90sqphk9b37bjld2wsd5z-pkg-config-wrapper-0.29.2",
+              "default": true
+            }
+          ]
+        }
+      }
+    },
+    "rust-analyzer": {
+      "resolved": "github:NixOS/nixpkgs/3d46470bb3030020f7e1361f33514854f5bfa86d#rust-analyzer",
+      "source": "nixpkg",
+      "systems": {
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "06-01",
+              "path": "/nix/store/6r2z4pfmvl0394n440lnngakwz6w68nc-rust-analyzer-2026-06-01",
+              "default": true
+            }
+          ]
+        }
+      }
+    },
+    "rustc": {
+      "plugin_version": "0.0.1",
+      "resolved": "github:NixOS/nixpkgs/8623c4c20aa4ca2f5fb81510d2944066c3fb0d96#rustc",
+      "source": "nixpkg",
+      "systems": {
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "path": "/nix/store/52mpj8lp8q6b1fpmanm6hm2l7xhgjrz6-rustc-wrapper-1.95.0",
+              "default": true
+            },
+            {
+              "name": "man",
+              "path": "/nix/store/zjq7qs7hvqlq3v7vvfs8ang3c2861r21-rustc-wrapper-1.95.0-man",
+              "default": true
+            }
+          ]
+        }
+      }
+    }
+  }
+}

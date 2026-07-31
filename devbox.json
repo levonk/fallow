@@ -1,21 +1,24 @@
 {
   "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.12.0/.schema/devbox.schema.json",
-  "packages": [
-    "rustc",
-    "cargo",
-    "rust-analyzer",
-    "pkg-config"
-  ],
+  "packages": {
+    "cargo":         "",
+    "rust-analyzer": "",
+    "pkg-config":    "",
+    "rustc":         ""
+  },
+  "nixpkgs": {
+    "commit": "8623c4c20aa4ca2f5fb81510d2944066c3fb0d96"
+  },
   "shell": {
     "init_hook": [
       "echo 'Welcome to the Fallow dev environment!'"
     ],
     "scripts": {
       "build": "cargo build --release",
-      "test": "cargo test",
-      "run": "cargo run --release --",
-      "lint": "cargo clippy",
-      "fmt": "cargo fmt"
+      "test":  "cargo test",
+      "run":   "cargo run --release --",
+      "lint":  "cargo clippy",
+      "fmt":   "cargo fmt"
     }
   }
 }
